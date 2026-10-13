@@ -1,0 +1,216 @@
+.logo , .nav-link {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: block;
+    object-fit: cover;
+}
+
+body {
+    background-color: #080808;
+    color: #FFFFFF;
+}
+/*.BodySection {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("back.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}*/
+
+h1, h2, h3, h4 {
+    color: #D4AF37;
+}
+.hi {
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.welcome {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.welcome p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 0 28px;
+}
+
+.hi span {
+    display: inline-block;
+    font-family: monospace;
+    /*font-size: clamb(25px, 3.5vw, 28px);*/
+    font-size: clamp(14px, 3.5vw, 40px);
+    letter-spacing: normal;
+    white-space: nowrap;
+    width: auto;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: hidden;
+    border-right: 3px solid currentColor;
+    animation: typing 4s steps(32, end) forwards,
+    cursor-blink 0.7s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 32ch;
+    }
+    
+}
+@keyframes cursor-blink {
+    50% {
+        border-color: transparent;
+    }
+    
+}
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #D4AF37;
+}
+.introD {
+    border: 2px solid #D4AF37;
+    display: flex;
+    border-radius: 9px;
+}
+.slide {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  max-width: 600px;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.deck {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: slidepics 12s infinite;
+}
+.deck img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}*/
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+@keyframes slidepics {
+    0%, 16% {
+        transform: translateX(0);
+    }
+    20%, 36% {
+        transform: translateX(-100%);
+    }
+    40%, 56% {
+        transform: translateX(-200%);
+    }
+    60%, 76% {
+        transform: translateX(-300%);
+    }
+    80%, 96% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
+.nav-link {
+    color: #FFFFFF;
+    background-color: #080808;
+    height: 30px;
+    text-align: center;
+    padding: 10px 12px;
+    border: 1px solid #D4AF37;
+    text-decoration: none;
+    transition: 0.3s; 
+    border-radius: 12px;
+    font-weight: bold;
+    line-height: 1.6;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 200px;
+    margin: 30px auto;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.nav-link:hover {
+    background-color: #F45118;
+    color: white;
+    border-color: #F45118;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: #222;
+    color: #fff;
+}
+
+.footer nav{
+    display: flex;
+    gap: 1rem;
+}
+.footer a{
+    color: inherit;
+}
+@media (max-width: 600px) {
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.footer address {
+    display: flex;
+    gap: 1rem;
+    font-style: normal;
+}
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}

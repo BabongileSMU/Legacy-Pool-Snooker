@@ -74,7 +74,7 @@ h1, h2, h3, h4 {
     width: auto;
     flex-shrink: 0;
     overflow: hidden;
-    white-space: hidden;
+   /* white-space: hidden;*/
     border-right: 3px solid currentColor;
     animation: typing 4s steps(32, end) forwards,
     cursor-blink 0.7s step-end infinite;
